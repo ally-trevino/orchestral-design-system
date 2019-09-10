@@ -1,0 +1,66 @@
+/* ===========================================================
+ Typography
+============================================================ */
+html {
+	color: #212121;
+
+
+}
+main {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 800px;
+}
+
+a {
+	color: #4E62CC;
+
+}
+/* ===========================================================
+Header Component
+============================================================ */
+header {
+	background-color: #d48166;
+	padding: 2rem;
+}
+
+
+header ul {
+	list-style: none;
+	margin:0;
+	overflow: hidden;
+	padding: 0;
+
+}
+
+header li {
+	display: inline;
+	float: left;
+}
+
+header li a {
+	display: block;
+	padding: 14px 16px;
+	text-align: center;
+	text-decoration: none;
+}
+
+header a {
+	text-decoration: none;
+}
+/* ===========================================================
+Footer Component
+============================================================ */
+footer {
+	background-color: #e6e2dd;
+	padding: 2rem;
+	text-align: right;
+}
+
+footer ul {
+	list-style: none;
+}
+
+footer li a {
+	text-decoration: none;
+}
