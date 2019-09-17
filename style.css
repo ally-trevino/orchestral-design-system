@@ -22,7 +22,7 @@ html {
 
 	--color-secondary-one-dark: #111410;
 
-	--color-secondary-two: #e6e2dd
+	--color-secondary-two: #e6e2dd;
 
 	--color-secondary-two-light: #FCFBF3;
 
@@ -48,6 +48,7 @@ html {
 html {
 	color: var(--color-primary-text);
 	--font-primary:'Raleway', sans-serif;
+	--font-secondary:'Montserrat', sans-serif;
 }
 
 main {
@@ -78,7 +79,11 @@ a:active {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	--font-secondary:'Montserrat', sans-serif;
+	font-family: var(--font-secondary);
+}
+
+p {
+	line-height: 1.5;
 }
 
 .primary-font {
@@ -127,7 +132,6 @@ Footer Component
 ============================================================ */
 footer {
 	background-color: var(--color-secondary-two);
-	padding: 2rem;
 	text-align: right;
 }
 
