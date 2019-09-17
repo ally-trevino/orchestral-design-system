@@ -48,8 +48,6 @@ html {
 html {
 	color: var(--color-primary-text);
 	--font-primary:'Raleway', sans-serif;
-	--font-secondary:'Montserrat', sans-serif;
-	font-family: var(--font-primary);
 }
 
 main {
@@ -80,7 +78,7 @@ a:active {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: var(--font-secondary);
+	--font-secondary:'Montserrat', sans-serif;
 }
 
 .primary-font {
