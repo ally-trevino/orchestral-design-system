@@ -1,26 +1,103 @@
 /* ===========================================================
- Typography
+ Page Layout
 ============================================================ */
-html {
-	color: #212121;
-
-
-}
 main {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 800px;
 }
+/* ===========================================================
+Colors
+============================================================ */
+html {
+	--color-primary: #D48166;
 
+	--color-primary-light: #FFB194;
+
+	--color-primary-dark: #A0533B;
+
+	--color-secondary-one: #373a36;
+
+	--color-secondary-one-light: #616460;
+
+	--color-secondary-one-dark: #111410;
+
+	--color-secondary-two: #e6e2dd
+
+	--color-secondary-two-light: #FCFBF3;
+
+	--color-secondary-two-dark: #c9c8c0;
+
+	--color-action: #4E62CC;
+
+	--color-positive: #C4FF94;
+
+	--color-negative: #E86C64;
+
+	--color-warning: #CC924E;
+
+	--color-primary-text: #212121;
+
+	--color-secondaery-text: #424242;
+
+	--color-disabled-text: #757575;
+}
+/* ===========================================================
+ Typography
+============================================================ */
+html {
+	color: var(--color-primary-text);
+	--font-primary:'Raleway', sans-serif;
+	--font-secondary:'Montserrat', sans-serif;
+	font-family: var(--font-primary);
+}
+
+main {
+	max-width: 35rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main a {
+	color: var(--color-action);
+}
 a {
-	color: #4E62CC;
+	color: var(--color-primary-text);
+	font-family: var(--font-secondary);
+	font-weight: bold;
+}
 
+a:visted {
+	color: var(--color-secondaery-text);
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	color: var(--color-action);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-secondary);
+}
+
+.primary-font {
+	font-family: var(--font-primary);
+	font-size: 2rem;
+	font-weight: normal;
+}
+
+.secondary-font  {
+	font-family: var(--font-secondary);
+	font-size: 2rem;
 }
 /* ===========================================================
 Header Component
 ============================================================ */
 header {
-	background-color: #d48166;
+	background-color: var(--color-primary);
 	padding: 2rem;
 }
 
@@ -34,13 +111,12 @@ header ul {
 }
 
 header li {
-	display: inline;
-	float: left;
+	display: inline-block;
 }
 
 header li a {
-	display: block;
-	padding: 14px 16px;
+	display: inline-block;
+	padding: 1.5rem 2rem;
 	text-align: center;
 	text-decoration: none;
 }
@@ -52,7 +128,7 @@ header a {
 Footer Component
 ============================================================ */
 footer {
-	background-color: #e6e2dd;
+	background-color: var(--color-secondary-two);
 	padding: 2rem;
 	text-align: right;
 }
