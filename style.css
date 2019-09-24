@@ -2,9 +2,16 @@
  Page Layout
 ============================================================ */
 main {
-	margin-left: auto;
-	margin-right: auto;
+	--margin-standard: 3rem auto;
+	
+	margin: var(--margin-standard);
 	max-width: 800px;
+}
+
+body {
+
+	--margin-body: 1rem 3rem;
+	--margin-secondary: 2rem 3rem;
 }
 /* ===========================================================
 Colors
@@ -38,7 +45,7 @@ html {
 
 	--color-primary-text: #212121;
 
-	--color-secondaery-text: #424242;
+	--color-secondary-text: #424242;
 
 	--color-disabled-text: #757575;
 }
@@ -46,9 +53,21 @@ html {
  Typography
 ============================================================ */
 html {
-	color: var(--color-primary-text);
 	--font-primary:'Raleway', sans-serif;
 	--font-secondary:'Montserrat', sans-serif;
+
+	--size-ratio: 1.3;
+	--size-six-up: calc(var(--size-five-up)* var(--size-ratio));
+	--size-five-up: calc(var(--size-four-up)* var(--size-ratio));
+	--size-four-up: calc(var(--size-three-up)* var(--size-ratio));
+	--size-three-up: calc(var(--size-two-up)* var(--size-ratio));
+	--size-two-up: calc(var(--size-one-up)* var(--size-ratio));
+	--size-one-up: calc( 1rem * var(--size-ratio));
+	--size-one-down: calc( 1rem / var(--size-ratio));
+
+	color: var(--color-primary-text);
+	font-size: 18px;
+	
 }
 
 main {
@@ -63,7 +82,7 @@ main a {
 a {
 	color: var(--color-primary-text);
 	font-family: var(--font-secondary);
-	font-weight: bold;
+	font-weight: normal;
 }
 
 a:visted {
@@ -80,10 +99,55 @@ a:active {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-secondary);
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: var(--color-action);
+}
+
+h1 {
+	font-size: var(--size-five-up);
+	font-weight: normal;
+	margin: var(--margin-secondary);
+}
+
+h2 {
+	color: var(--color-secondary-text);
+	font-size: var(--size-four-up);
+
+}
+
+h3 {
+	color: var(--color-secondary-text);
+	font-size: var(--size-three-up);
+}
+
+h4 {
+	font-size: var(--size-two-up);
+		
+}
+
+h5 {
+	font-size: var(--size-one-up);
+}
+
+h6 {
+	font-size: var(--size-one-down);
 }
 
 p {
-	line-height: 1.5;
+	font-family: var(--font-primary);
+	line-height: 1.45;
+}
+
+footer a {
+	color: var(--color-action);
+}
+
+footer {
+	font-size: var(--size-one-down);
 }
 
 .primary-font {
@@ -106,7 +170,7 @@ header {
 
 
 header ul {
-	list-style: none;
+	list-style-type: none;
 	margin:0;
 	overflow: hidden;
 	padding: 0;
@@ -127,18 +191,79 @@ header li a {
 header a {
 	text-decoration: none;
 }
+
+.logo {
+	border: dashed 1px #E6E2DD;
+	font-family: var(--font-secondary);
+	font-size: var(--size-two-up);
+	padding: .5rem 2rem;
+}
 /* ===========================================================
 Footer Component
 ============================================================ */
 footer {
 	background-color: var(--color-secondary-two);
+	padding: 1rem 1.5rem;
 	text-align: right;
 }
 
-footer ul {
-	list-style: none;
+
+footer ul  {
+	list-style-type: none;
 }
 
 footer li a {
 	text-decoration: none;
 }
+
+/* ===========================================================
+Examples
+============================================================ */
+.heading-example figcaption {
+	text-align: right;
+	font-size: var(--size-one-down);
+	
+}
+.heading-example ul {
+	list-style-type: none;
+}
+
+.feature-example {
+	font-family: var(--font-primary);
+	font-size: var(--size-two-up);
+	line-height: 1.45;
+}
+
+.body-text-example {
+	font-family: var(--font-primary);
+	font-size: 1rem;
+	margin: var(--margin-body);
+}
+
+.tertiary-example {
+	font-family: var(--font-primary);
+	font-size: var(--size-one-down);
+	margin: var(--margin-body);
+}
+
+.unordered-list-example ul {
+	font-style: var(--font-secondary);
+	list-style-type: circle;
+}
+
+.unordered-list-example ul ul {
+	font-family: var(--font-primary);
+	list-style-type: square;
+}
+
+.ordered-list-example ol {
+	font-style: var(--font-secondary);
+	list-style-type: decimal-leading-zero;
+
+}
+
+.ordered-list-example ol ol {
+	font-family: var(--font-primary);
+	list-style-position: inside;
+	list-style-type: lower-roman;
+} 
