@@ -5,7 +5,7 @@ main {
 	--margin-standard: 3rem auto;
 	
 	margin: var(--margin-standard);
-	max-width: 800px;
+	max-width: 35rem;
 }
 
 body {
@@ -18,35 +18,20 @@ Colors
 ============================================================ */
 html {
 	--color-primary: #D48166;
-
 	--color-primary-light: #FFB194;
-
 	--color-primary-dark: #A0533B;
-
 	--color-secondary-one: #373a36;
-
 	--color-secondary-one-light: #616460;
-
 	--color-secondary-one-dark: #111410;
-
 	--color-secondary-two: #e6e2dd;
-
 	--color-secondary-two-light: #FCFBF3;
-
 	--color-secondary-two-dark: #c9c8c0;
-
 	--color-action: #4E62CC;
-
 	--color-positive: #C4FF94;
-
 	--color-negative: #E86C64;
-
 	--color-warning: #CC924E;
-
 	--color-primary-text: #212121;
-
 	--color-secondary-text: #424242;
-
 	--color-disabled-text: #757575;
 }
 /* ===========================================================
@@ -66,34 +51,31 @@ html {
 	--size-one-down: calc( 1rem / var(--size-ratio));
 
 	color: var(--color-primary-text);
+	font-family: var(--font-primary);
 	font-size: 18px;
+	line-height: 1.45;
 	
 }
 
-main {
-	max-width: 35rem;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-main a {
+header a {
 	color: var(--color-action);
 }
-a {
+
+nav a {
 	color: var(--color-primary-text);
 	font-family: var(--font-secondary);
 	font-weight: normal;
 }
 
-a:visted {
+nav a:visited {
 	color: var(--color-secondaery-text);
 }
 
-a:hover {
+nav a:hover {
 	text-decoration: underline;
 }
 
-a:active {
+nav a:active {
 	color: var(--color-action);
 }
 
@@ -137,29 +119,6 @@ h6 {
 	font-size: var(--size-one-down);
 }
 
-p {
-	font-family: var(--font-primary);
-	line-height: 1.45;
-}
-
-footer a {
-	color: var(--color-action);
-}
-
-footer {
-	font-size: var(--size-one-down);
-}
-
-.primary-font {
-	font-family: var(--font-primary);
-	font-size: 2rem;
-	font-weight: normal;
-}
-
-.secondary-font  {
-	font-family: var(--font-secondary);
-	font-size: 2rem;
-}
 /* ===========================================================
 Header Component
 ============================================================ */
@@ -207,6 +166,13 @@ footer {
 	text-align: right;
 }
 
+footer a {
+	color: var(--color-action);
+}
+
+footer {
+	font-size: var(--size-one-down);
+}
 
 footer ul  {
 	list-style-type: none;
@@ -267,3 +233,110 @@ Examples
 	list-style-position: inside;
 	list-style-type: lower-roman;
 } 
+
+.primary-font {
+	font-family: var(--font-primary);
+	font-size: 2rem;
+	font-weight: normal;
+}
+
+.secondary-font  {
+	font-family: var(--font-secondary);
+	font-size: 2rem;
+}
+
+.hero-button {
+	background-color: var(--color-action);
+	border-radius: 1.8rem;
+	box-shadow: 18px 18px 22px -4px rgba(78,98,204,0.33);
+	display: inline-block;
+	color: var(--color-secondary-two);
+	font-family: var(--font-secondary);
+	padding: 1.2rem 2rem;
+	text-decoration: none;
+	
+}
+
+.hero-button:hover {
+	background-color: var(--color-secondary-two);
+	box-shadow: 1px 1px;
+	color: var(--color-action);
+	transition: all .5s;
+}
+
+.hero-button:focus {
+	background-color: var(--color-secondary-one);
+}
+.hero-button:active {
+	background-color: var(--color-secondary-two);
+	color: var(--color-secondary-one);
+}
+
+.normal-button {
+	background-color: var(--color-primary);
+	color: var(--color-secondary-two);
+	border-radius: 1.8rem;
+	box-shadow: 18px 18px 22px -4px rgba(212,129,102,0.33);
+	display: inline-block;
+	font-family: var(--font-secondary);
+	padding: 1.2rem 2rem;
+	text-decoration: none;
+}
+
+.normal-button:hover {
+	background-color: var(--color-secondary-one);
+	box-shadow: 1px 1px;
+	color: var(--color-secondary-two);
+}
+
+.normal-buton:active {
+	background-color: var(--color-secondary-two);
+	color: var(--color-secondary-one);
+}
+
+.tertiary-button {
+	background-color: var(--color-secondary-two);
+	border: 1px solid var(--color-secondary-one);
+	border-radius:1.8rem;
+	box-shadow: 18px 18px 22px -4px rgba(230,226,221,0.33);
+	color: var(--color-secondary-one);
+	display: inline-block;
+	font-family: var(--font-secondary);
+	padding: 1.2rem 2rem;
+	text-decoration: none;
+
+}
+
+.tertiary-button:hover {
+	background-color: var(--color-secondary-one);
+	box-shadow: 1px 1px;
+	color: var(--color-secondary-two);
+}
+
+.tertiary-button:active {
+	background-color: var(--color-secondary-two);
+	color: var(--color-secondary-one);
+}
+
+.summary-example {
+	background-color: var(--color-primary);
+	box-shadow: 5px 5px 15px rgba(0,0,0,.5);
+	font-family: var(--font-secondary);
+	padding: 1.3rem;
+}
+details {
+	background-color: var(--color-secondary-two-light);
+	box-shadow: 5px 5px 15px rgba(0,0,0,.5);
+
+}
+
+.accordion-example h4 {
+	background-color: var(--color-secondary-two);
+	border-bottom: 1px solid var(--color-secondary-one);
+	margin: 0;
+	padding: 1.2rem 1.5rem;
+}
+
+.accordion-example p {
+	padding: 0 1.2rem;
+	}
