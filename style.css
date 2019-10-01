@@ -92,7 +92,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 h1 {
 	font-size: var(--size-five-up);
 	font-weight: normal;
-	margin: var(--margin-secondary);
+	margin: var(--margin-primary);
 }
 
 h2 {
@@ -261,7 +261,7 @@ Examples
 	background-color: var(--color-secondary-two);
 	box-shadow: 1px 1px;
 	color: var(--color-action);
-	transition: all .5s;
+	transition: all .3s ease-out;
 }
 
 .hero-button:focus {
@@ -284,9 +284,10 @@ Examples
 }
 
 .normal-button:hover {
-	background-color: var(--color-secondary-one);
+	background-color: var(--color-secondary-two);
 	box-shadow: 1px 1px;
-	color: var(--color-secondary-two);
+	color: var(--color-primary);
+	transition: all .3s ease-out;
 }
 
 .normal-buton:active {
@@ -311,6 +312,7 @@ Examples
 	background-color: var(--color-secondary-one);
 	box-shadow: 1px 1px;
 	color: var(--color-secondary-two);
+	transition: all .3s ease-out;
 }
 
 .tertiary-button:active {
@@ -323,7 +325,6 @@ Examples
 	box-shadow: 5px 5px 15px rgba(0,0,0,.5);
 	font-family: var(--font-secondary);
 	padding: 1.3rem;
-	position: relative;
 }
 details {
 	background-color: var(--color-secondary-two-light);
