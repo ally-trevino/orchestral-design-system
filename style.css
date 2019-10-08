@@ -342,3 +342,42 @@ details {
 .accordion-example p {
 	padding: 0 1.2rem;
 	}
+
+.modal-demo {
+	border:none;
+	border-top: 1rem solid var(--color-warning);
+	box-shadow: 5px 5px 15px rgba(0,0,0,.5);
+	padding: 0 2rem;
+}
+
+.modal-demo h3 {
+	border-bottom: 2px solid var(--color-secondary-two);
+}
+
+.modal-demo::backdrop {
+	background-color: rgba();
+}
+
+dialog[open] {
+	animation: bounce-in 1s;
+
+}
+
+@keyframes bounce-in {
+	0% {
+		transform: scale(0.1);
+		opacity: 0;
+	}
+	60% {
+		transform: scale(1.2);
+		opacity: 1
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+
+	
+
+

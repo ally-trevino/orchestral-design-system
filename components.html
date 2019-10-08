@@ -49,10 +49,21 @@
 						<p>Brand Activations</p>
 						<p>Product Launches</p>
 						<p>Festivals</p>
+				</div>
+			</details>
+			<details>
+				<summary class="summary-example">Corporate Services</summary>
+				<div class="accordion-example">
 					<h4>Coroporate Events</h4>
 						<p>Grand Openings</p>
 						<p>Holiday Parties</p>
 						<p>Retreats</p>
+
+				</div>
+			</details>
+			<details>
+				<summary class="summary-example">Other Services</summary>
+				<div class="accordion-example">
 					<h4>Destination Management</h4>
 						<p>Teambuilding</p>
 						<p>Activities & Tours</p>
@@ -62,6 +73,18 @@
 
 				</div>
 			</details>
+		</figure>
+
+		<h2>Modal Dialog</h2>
+		<figure>
+
+		<button id="open-modal" type="button">Open Modal</button>
+		<dialog class="modal-demo" id="modal-demo">
+			<h3>Modal Title Goes Here</h3>
+			<p>Dialog content goes here if there is an action that the user needs to address immediately.</p>
+			
+		</dialog>
+
 		</figure>
 	</main>
 
@@ -78,5 +101,25 @@
 
 		<small>&copy; Copyright 2019, Ally</small>
 	</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+
+const modal = document.querySelector('dialog');
+const open = document.getElementById('open-modal');
+
+open.addEventListener('click', () => {
+modal.showModal();
+});
+
+modal.addEventListener('click', event => {
+if (event.target === modal) {
+modal.close('cancelled');
+}
+});
+
+});
+</script>
+
 </body>
 </html>
