@@ -344,8 +344,8 @@ details {
 	}
 
 .modal-demo {
-	border:none;
 	border-top: 1rem solid var(--color-warning);
+	border:none;
 	box-shadow: 5px 5px 15px rgba(0,0,0,.5);
 	padding: 0 2rem;
 }
