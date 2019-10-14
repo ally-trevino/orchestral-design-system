@@ -183,6 +183,223 @@ footer li a {
 }
 
 /* ===========================================================
+buttons
+============================================================ */
+.link-button {
+	border-radius: 1.8rem;
+	display: inline-block;
+	font-family: var(--font-secondary);
+	padding: 1.2rem 2rem;
+	text-decoration: none;
+
+}
+
+.link-button:hover {
+	transition: all .3s ease-out;
+}
+.hero-button {
+	background-color: var(--color-action);
+	box-shadow: 18px 18px 22px -4px rgba(78,98,204,0.33);
+	color: var(--color-secondary-two);
+	
+	
+}
+
+.hero-button:hover {
+	background-color: var(--color-secondary-two);
+	box-shadow: 1px 1px;
+	color: var(--color-action);
+	
+}
+
+.hero-button:focus {
+	background-color: var(--color-secondary-one);
+}
+.hero-button:active {
+	background-color: var(--color-secondary-two);
+	color: var(--color-secondary-one);
+}
+
+.normal-button {
+	background-color: var(--color-primary);
+	color: var(--color-secondary-two);
+	box-shadow: 18px 18px 22px -4px rgba(212,129,102,0.33);
+}
+
+.normal-button:hover {
+	background-color: var(--color-secondary-two);
+	box-shadow: 1px 1px;
+	color: var(--color-primary);
+}
+
+.normal-buton:active {
+	background-color: var(--color-secondary-two);
+	color: var(--color-secondary-one);
+}
+
+.tertiary-button {
+	background-color: var(--color-secondary-two);
+	border: 1px solid var(--color-secondary-one)
+	box-shadow: 18px 18px 22px -4px rgba(0,0,0,0.33);
+	color: var(--color-secondary-one);
+
+}
+
+.tertiary-button:hover {
+	background-color: var(--color-secondary-one);
+	box-shadow: 1px 1px;
+	color: var(--color-secondary-two);
+}
+
+.tertiary-button:active {
+	background-color: var(--color-secondary-two);
+	color: var(--color-secondary-one);
+}
+/* ===========================================================
+Modals
+============================================================ */
+dialog {
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	border-top: 2rem solid var(--color-warning);
+	box-shadow: 5px 5px 15px rgba(0,0,0,.5);
+	padding: 0 2rem;
+}
+
+dialog h3 {
+	border-bottom: 2px solid var(--color-secondary-two);
+}
+
+dialog::backdrop {
+	background-color: rgba(0,0,0, .4);
+}
+
+dialog[open] {
+	animation: bounce-in 1s;
+
+}
+
+@keyframes bounce-in {
+	0% {
+		transform: scale(0.1);
+		opacity: 0;
+	}
+	60% {
+		transform: scale(1.2);
+		opacity: 1
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+/* ===========================================================
+Accordions
+============================================================ */
+
+summary {
+	background-color: var(--color-primary);
+	box-shadow: 5px 5px 15px rgba(0,0,0,.5);
+	font-family: var(--font-secondary);
+	padding: 1.3rem;
+}
+details {
+	background-color: var(--color-secondary-two-light);
+	box-shadow: 5px 5px 15px rgba(0,0,0,.5);
+
+}
+
+.accordion h4 {
+	background-color: var(--color-secondary-two);
+	border-bottom: 1px solid var(--color-secondary-one);
+	margin: 0;
+	padding: 1.2rem 1.5rem;
+}
+
+.accordion p {
+	padding: 0 1.2rem;
+	}
+/* ===========================================================
+Forms
+============================================================ */
+form {
+	background-color: var(--color-secondary-one);
+	box-shadow: rgba(0,0,12, .3);
+	padding: 2rem;
+}
+input, select, textarea {
+	border: 1px solid var(--color-secondary-two);
+	box-sizing: border-box;
+	display: block;
+	min-height: 2rem;
+	min-width: 50%;
+	padding: .5rem;
+}
+
+input:focus, select:focus, textarea:focus {
+	border: 2px solid var(--color-action);
+}
+
+input[disabled], textarea[disabled] {
+	background-color: var(--color-secondary-two);
+	opacity: .5;
+}
+
+label {
+	display: block;
+	margin:.5rem 0 0;
+	color: var(--color-secondary-two);
+}
+
+textarea {
+	min-height: 4rem;
+}
+.error-text {
+	color: var(--color-negative);
+	font-size: var(--size-one-down);
+	margin: 0, 0, .2rem;
+	font-style: italic;
+}
+
+.error-input {
+	border: 2px solid var(--color-negative);
+}
+
+.form-help{
+	font-size: var(--size-one-down);
+	color: var(--color-secondary-two);
+}
+
+[type="submit"] {
+	background-color: var(--color-action);
+	color: var(--color-secondary-two);
+	border-radius: 1.8rem;
+	display: block;
+	font-family: var(--font-secondary);
+	font-size: 1rem;
+	padding: 1.2rem 2rem;
+	text-decoration: none;
+}
+
+[type="submit"]:hover {
+	background-color: var(--color-secondary-two);
+	color: var(--color-action);
+	transition: all .3s ease-out;
+}
+
+[type="submit"]:focus {
+	box-shadow: 18px 18px 22px -4px rgba(78,98,204,0.33);
+	text-decoration: underline;
+	outline: none;
+
+}
+
+[type="submit"]:active {
+	background-color: var(--color-secondary-two);
+	color: var(--color-secondary-one);
+}
+
+/* ===========================================================
 Examples
 ============================================================ */
 .heading-example figcaption {
@@ -245,137 +462,9 @@ Examples
 	font-size: 2rem;
 }
 
-.hero-button {
-	background-color: var(--color-action);
-	border-radius: 1.8rem;
-	box-shadow: 18px 18px 22px -4px rgba(78,98,204,0.33);
-	display: inline-block;
-	color: var(--color-secondary-two);
-	font-family: var(--font-secondary);
-	padding: 1.2rem 2rem;
-	text-decoration: none;
-	
-}
 
-.hero-button:hover {
-	background-color: var(--color-secondary-two);
-	box-shadow: 1px 1px;
-	color: var(--color-action);
-	transition: all .3s ease-out;
-}
 
-.hero-button:focus {
-	background-color: var(--color-secondary-one);
-}
-.hero-button:active {
-	background-color: var(--color-secondary-two);
-	color: var(--color-secondary-one);
-}
 
-.normal-button {
-	background-color: var(--color-primary);
-	color: var(--color-secondary-two);
-	border-radius: 1.8rem;
-	box-shadow: 18px 18px 22px -4px rgba(212,129,102,0.33);
-	display: inline-block;
-	font-family: var(--font-secondary);
-	padding: 1.2rem 2rem;
-	text-decoration: none;
-}
-
-.normal-button:hover {
-	background-color: var(--color-secondary-two);
-	box-shadow: 1px 1px;
-	color: var(--color-primary);
-	transition: all .3s ease-out;
-}
-
-.normal-buton:active {
-	background-color: var(--color-secondary-two);
-	color: var(--color-secondary-one);
-}
-
-.tertiary-button {
-	background-color: var(--color-secondary-two);
-	border: 1px solid var(--color-secondary-one);
-	border-radius:1.8rem;
-	box-shadow: 18px 18px 22px -4px rgba(230,226,221,0.33);
-	color: var(--color-secondary-one);
-	display: inline-block;
-	font-family: var(--font-secondary);
-	padding: 1.2rem 2rem;
-	text-decoration: none;
-
-}
-
-.tertiary-button:hover {
-	background-color: var(--color-secondary-one);
-	box-shadow: 1px 1px;
-	color: var(--color-secondary-two);
-	transition: all .3s ease-out;
-}
-
-.tertiary-button:active {
-	background-color: var(--color-secondary-two);
-	color: var(--color-secondary-one);
-}
-
-.summary-example {
-	background-color: var(--color-primary);
-	box-shadow: 5px 5px 15px rgba(0,0,0,.5);
-	font-family: var(--font-secondary);
-	padding: 1.3rem;
-}
-details {
-	background-color: var(--color-secondary-two-light);
-	box-shadow: 5px 5px 15px rgba(0,0,0,.5);
-
-}
-
-.accordion-example h4 {
-	background-color: var(--color-secondary-two);
-	border-bottom: 1px solid var(--color-secondary-one);
-	margin: 0;
-	padding: 1.2rem 1.5rem;
-}
-
-.accordion-example p {
-	padding: 0 1.2rem;
-	}
-
-.modal-demo {
-	border-top: 1rem solid var(--color-warning);
-	border:none;
-	box-shadow: 5px 5px 15px rgba(0,0,0,.5);
-	padding: 0 2rem;
-}
-
-.modal-demo h3 {
-	border-bottom: 2px solid var(--color-secondary-two);
-}
-
-.modal-demo::backdrop {
-	background-color: rgba();
-}
-
-dialog[open] {
-	animation: bounce-in 1s;
-
-}
-
-@keyframes bounce-in {
-	0% {
-		transform: scale(0.1);
-		opacity: 0;
-	}
-	60% {
-		transform: scale(1.2);
-		opacity: 1
-	}
-	100% {
-		transform: scale(1);
-	}
-}
 
 
 	

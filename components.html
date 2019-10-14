@@ -28,48 +28,50 @@
 		
 		<h3>Hero Button</h3>
 		<figure>
-			<a href="" class="hero-button">Link</a>
+			<a href="" class="hero-button link-button">Link</a>
 		</figure>
 
 		<h3>Normal Button</h3>
 		<figure>
-			<a href="" class="normal-button">Link</a>
+			<a href="" class="normal-button link-button">Link</a>
 		</figure>
 		<h3>Tertiary Button</h3>
 		<figure>
-			<a href="" class="tertiary-button">Link</a>
+			<a href="" class="tertiary-button link-button">Link</a>
 		</figure>
 
 		<h2>Accordions</h2>
 		<figure>
 			<details>
-				<summary class="summary-example">Event Services</summary>
-				<div class="accordion-example">
+				<summary>Event Services</summary>
+				<div class="accordion">
 					<h4>Experiential Events</h4>
-						<p>Brand Activations</p>
-						<p>Product Launches</p>
-						<p>Festivals</p>
+					<p>Brand Activations</p>
+					<p>Product Launches</p>
+					<p>Festivals</p>
 				</div>
 			</details>
+
 			<details>
-				<summary class="summary-example">Corporate Services</summary>
-				<div class="accordion-example">
+				<summary>Corporate Services</summary>
+
+				<div class="accordion">
 					<h4>Coroporate Events</h4>
-						<p>Grand Openings</p>
-						<p>Holiday Parties</p>
-						<p>Retreats</p>
+					<p>Grand Openings</p>
+					<p>Holiday Parties</p>
+					<p>Retreats</p>
 
 				</div>
 			</details>
 			<details>
-				<summary class="summary-example">Other Services</summary>
-				<div class="accordion-example">
+				<summary>Other Services</summary>
+				<div class="accordion">
 					<h4>Destination Management</h4>
-						<p>Teambuilding</p>
-						<p>Activities & Tours</p>
+					<p>Teambuilding</p>
+					<p>Activities & Tours</p>
 					<h4>Social Events</h4>
-						<p>Birthday Parties</p>
-						<p>Anniversaries</p>
+					<p>Birthday Parties</p>
+					<p>Anniversaries</p>
 
 				</div>
 			</details>
@@ -78,13 +80,101 @@
 		<h2>Modal Dialog</h2>
 		<figure>
 
-		<button id="open-modal" type="button">Open Modal</button>
-		<dialog class="modal-demo" id="modal-demo">
-			<h3>Modal Title Goes Here</h3>
-			<p>Dialog content goes here if there is an action that the user needs to address immediately.</p>
-			
-		</dialog>
+			<button id="open-modal" type="button">Open Modal</button>
+			<dialog id="modal-demo">
+				<h3>Modal Title Goes Here</h3>
+				<p>Dialog content goes here if there is an action that the user needs to address immediately.</p>
+				
+			</dialog>
 
+		</figure>
+
+		<h2>Form Inputs</h2>
+
+		<h3>Text</h3>
+		<figure>
+			<form action="">
+				<label for="name">Name</label>
+				<p class="form-help">First and Last</p>
+				<input type="text" id="name" name="name" placeholder="Jane Doe">
+			</form>
+		</figure>
+		<figure>
+			<form action="">
+				<label for="email">Email</label>
+				<p class="error-text">Enter an email address in the correct format, like name@example.com</p>
+				<input type="email" id="email" class="error-input" name="email">
+			</form>
+		</figure>
+		<figure>
+			<form action="">
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" placeholder="name@example.com" disabled>
+			</form>
+		</figure>
+
+		<h3>Textarea</h3>
+		<figure>
+			<form action="">
+				<label for="textarea">Your Message</label>
+				<textarea id="textarea" name="message" placeholder="Type your message here"></textarea>
+			</form>
+		</figure>
+		<figure>
+			<form action="">
+				<label for="textarea">Your Message</label>
+				<p class="error-text">This field is required</p>
+				<textarea id="textarea" name="message" class="error-input" placeholder="Type your message here" required></textarea>
+			</form>
+		</figure>
+		<figure>
+			<form action="">
+				<label for="textarea">Your Message</label>
+				<textarea id="textarea" name="message" placeholder="Type your message here" disabled=""></textarea>
+			</form>
+		</figure>
+
+		<h3>Select</h3>
+		<figure>
+			<form action="">
+				<label for="select">Select Title</label>
+				<select id="select" name="select">
+					<option value="" selected="" disabled="" hidden="">Choose One</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+			</form>
+		</figure>
+		<figure>
+			<form action="">
+				<label for="select">Select Title</label>
+				<p class="error-text">This field is required</p>
+				<select class="error-input" id="select name="select">
+					<option value="" selected="" disabled="" hidden="">Choose One</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+			</form>
+		</figure>
+		<figure>
+			<form action="">
+				<label for="select">Select Title</label>
+				<select id="select" name="select" disabled="">
+					<option value="" selected="" disabled="" hidden="">Choose One</option>
+					<option>Option 1</option>
+					<option>Option 2</option>
+					<option>Option 3</option>
+				</select>
+			</form>
+		</figure>
+
+		<h3>Submit/Button</h3>
+		<figure>
+			<form action="">
+				<button type="submit">Submit</button>
+			</form>
 		</figure>
 	</main>
 
