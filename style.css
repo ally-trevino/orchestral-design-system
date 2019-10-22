@@ -2,16 +2,19 @@
  Page Layout
 ============================================================ */
 main {
-	--margin-standard: 3rem auto;
-	
-	margin: var(--margin-standard);
+	margin: 2rem;
 	max-width: 35rem;
 }
 
 body {
+	margin: 0;
+	
+}
 
-	--margin-body: 1rem 3rem;
-	--margin-secondary: 2rem 3rem;
+@media (min-width: 700px) {
+	main {
+		margin: 3rem auto;
+	}
 }
 /* ===========================================================
 Colors
@@ -41,7 +44,7 @@ html {
 	--font-primary:'Raleway', sans-serif;
 	--font-secondary:'Montserrat', sans-serif;
 
-	--size-ratio: 1.3;
+	--size-ratio: 1.2;
 	--size-six-up: calc(var(--size-five-up)* var(--size-ratio));
 	--size-five-up: calc(var(--size-four-up)* var(--size-ratio));
 	--size-four-up: calc(var(--size-three-up)* var(--size-ratio));
@@ -53,29 +56,30 @@ html {
 	color: var(--color-primary-text);
 	font-family: var(--font-primary);
 	font-size: 18px;
-	line-height: 1.45;
+	line-height: 1.5;
 	
 }
 
-header a {
+.logo {
 	color: var(--color-action);
+	text-decoration: none;
 }
 
-nav a {
+.primary-nav a {
 	color: var(--color-primary-text);
 	font-family: var(--font-secondary);
 	font-weight: normal;
 }
 
-nav a:visited {
+.primary-nav a:visited {
 	color: var(--color-secondaery-text);
 }
 
-nav a:hover {
+.primary-nav a:hover {
 	text-decoration: underline;
 }
 
-nav a:active {
+.primary-nav a:active {
 	color: var(--color-action);
 }
 
@@ -119,6 +123,19 @@ h6 {
 	font-size: var(--size-one-down);
 }
 
+
+@media (min-width: 573px){
+	nav a {
+		font-size: var(--size-one-up);
+	}
+}
+@media (min-width: 780px) {
+	main {
+		--ratio: 1.4;
+		font-size: 20px;
+		line-height: 1.45;
+	}
+}
 /* ===========================================================
 Header Component
 ============================================================ */
@@ -128,34 +145,50 @@ header {
 }
 
 
-header ul {
-	list-style-type: none;
-	margin:0;
-	overflow: hidden;
-	padding: 0;
-
-}
-
-header li {
-	display: inline-block;
-}
-
-header li a {
-	display: inline-block;
-	padding: 1.5rem 2rem;
-	text-align: center;
-	text-decoration: none;
-}
-
-header a {
-	text-decoration: none;
-}
-
 .logo {
 	border: dashed 1px #E6E2DD;
 	font-family: var(--font-secondary);
 	font-size: var(--size-two-up);
 	padding: .5rem 2rem;
+}
+
+
+/*====================================
+Page Nav Component
+====================================*/
+.primary-nav {
+	background-color: var(--color-primary);
+	margin: 0;
+}
+
+.primary-nav li a {
+	display: block;
+	margin: 1rem 0;	
+	text-decoration: none;
+}
+
+.primary-nav ul {
+	list-style: none;
+	padding: 0;
+
+}
+
+.primary-nav li a {
+	display: block;
+	margin: 1rem 0;
+	text-decoration: none;
+}
+
+.current-page {
+	border-bottom: dashed 1px #E6E2DD;
+	padding: .5rem;
+}
+@media (min-width: 770px){
+	.primary-nav li {
+		display: inline-block;
+		padding: .5rem 2rem;
+	}
+
 }
 /* ===========================================================
 Footer Component
@@ -166,7 +199,7 @@ footer {
 	text-align: right;
 }
 
-footer a {
+.vertical-nav a {
 	color: var(--color-action);
 }
 
@@ -174,12 +207,21 @@ footer {
 	font-size: var(--size-one-down);
 }
 
-footer ul  {
+.vertical-nav {
+	background-color: var(--color-secondary-two);
+	padding: .5rem 0;
+}
+
+.vertical-nav ul {
 	list-style-type: none;
 }
 
-footer li a {
-	text-decoration: none;
+.vertical-nav li a {
+	text-decoration: underline;
+}
+
+.subcategory li a {
+	font-size: var(--size-one-down);
 }
 
 /* ===========================================================
@@ -352,7 +394,8 @@ label {
 }
 
 textarea {
-	min-height: 4rem;
+	min-height: 6rem;
+	min-width: 80%;
 }
 .error-text {
 	color: var(--color-negative);
@@ -462,8 +505,12 @@ Examples
 	font-size: 2rem;
 }
 
+.full-width {
+	margin-left: calc(-100vw / 2 + 35rem / 2);
+	margin-right: calc(-100vw / 2 + 35rem / 2);
+	
 
-
+}
 
 
 

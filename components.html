@@ -10,11 +10,11 @@
 	<header>
 		<a href="index.html" class="logo">Orchestral</a>
 
-		<nav>
+		<nav class="primary-nav">
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="style.html">Style</a></li>
-				<li><a href="components.html">Components</a></li>
+				<li><a href="components.html" class="current-page">Components</a></li>
 				<li><a href="layouts.html">Layout</a></li>
 			</ul>
 		</nav>
@@ -176,12 +176,38 @@
 				<button type="submit">Submit</button>
 			</form>
 		</figure>
+		<h2>Navigation</h2>
+		<h3>Primary Navigation</h3>
+		<figure class="full-width">
+			<nav class="primary-nav">
+				<ul>
+					<li><a href="#">Nav 1</a></li>
+					<li><a href="#">Nav 2</a></li>
+					<li><a href="#">Nav 3</a></li>
+					<li><a href="#">Nav 4</a></li>
+				</ul>
+		</nav>
+		</figure>
+		<h3>Secondary: Vertical Navigation</h3>
+		<figure>
+			<nav class="vertical-nav">
+			<ul>
+				<li><a href="#">Nav 1</a></li>
+				<li><a href="#">Nav 2</a>
+					<ul class="subcategory">
+						<li><a href="#">Subcategory</a></li>
+					</ul>
+				</li>
+				<li><a href=#>Nav 3</a></li>
+			</ul>
+		</nav>
+		</figure>
 	</main>
 
 	<footer>
 		<p>Created by Ally Trevino</p>
 		<p>UX/UI student based in Austin, Texas</p>
-		<nav>
+		<nav class="vertical-nav">
 			<ul>
 				<li><a href="www.linkedin.com/in/allison-trevino-2a3518107">Linkedin</a></li>
 				<li><a href="https://www.behance.net/allytrevino24">Behance</a></li>
@@ -189,7 +215,7 @@
 			</ul>
 		</nav>
 
-		<small>&copy; Copyright 2019, Ally</small>
+		<small>&copy; Copyright 2019, Ally Trevino</small>
 	</footer>
 
 <script>
