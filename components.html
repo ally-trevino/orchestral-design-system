@@ -5,8 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Components</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
+	<a name="top"></a>
 	<header>
 		<a href="index.html" class="logo">Orchestral</a>
 
@@ -22,7 +25,11 @@
 	</header>
 
 	<main>
-		
+		<a href="#top" class="tertiary-button arrow-top">
+			<i class="material-icons">
+			arrow_upward
+			</i>
+		</a>
 		<h1>Orchestral Components</h1>
 		<h2>Link Buttons</h2>
 		
@@ -90,6 +97,7 @@
 		</figure>
 
 		<h2>Form Inputs</h2>
+		<p>All forms will have a background color of Secondary 1 #373a36.</p>
 
 		<h3>Text</h3>
 		<figure>
@@ -176,7 +184,9 @@
 				<button type="submit">Submit</button>
 			</form>
 		</figure>
+
 		<h2>Navigation</h2>
+
 		<h3>Primary Navigation</h3>
 		<figure class="full-width">
 			<nav class="primary-nav">
@@ -191,16 +201,102 @@
 		<h3>Secondary: Vertical Navigation</h3>
 		<figure>
 			<nav class="vertical-nav">
-			<ul>
-				<li><a href="#">Nav 1</a></li>
-				<li><a href="#">Nav 2</a>
-					<ul class="subcategory">
-						<li><a href="#">Subcategory</a></li>
-					</ul>
-				</li>
-				<li><a href=#>Nav 3</a></li>
-			</ul>
+				<ul>
+					<li><a href="#">Nav 1</a></li>
+					<li><a href="#">Nav 2</a>
+						<ul class="subcategory">
+							<li><a href="#">Subcategory</a></li>
+						</ul>
+					</li>
+					<li><a href=#>Nav 3</a></li>
+				</ul>
 		</nav>
+		</figure>
+
+		<h2>Notifications</h2>
+		<h3>Error</h3>
+		<figure>
+			<div class="notification-box error">
+				<div class="notification-icons">
+					<i class="material-icons md-light">
+						error
+					</i>
+			
+				</div>
+				<div>
+					<h4>Notification Title</h4>
+					<p>Notification message goes here.</p>	
+				</div>
+				<div class="notification-icons">
+					<i class="material-icons md-light">
+							clear
+					</i>
+				</div>
+			</div>
+		</figure>
+		<h3>Warning</h3>
+		<figure>
+			<div class="notification-box warning">
+				<div class="notification-icons">
+					<i class="material-icons md-light">
+						error
+					</i>
+			
+				</div>
+				<div>
+					<h4>Notification Title</h4>
+					<p>Notification message goes here.</p>	
+				</div>
+				<div class="notification-icons">
+					<i class="material-icons md-light">
+							clear
+					</i>
+				</div>
+			</div>
+		</figure>
+		<h3>Neutral</h3>
+		<figure>
+			<div class="notification-box neutral">
+				<div class="notification-icons">
+					<i class="material-icons md-light">
+						error
+					</i>
+			
+				</div>
+				<div>
+					<h4>Notification Title</h4>
+					<p>Notification message goes here.</p>	
+				</div>
+				<div class="notification-icons">
+					<i class="material-icons md-light">
+							clear
+					</i>
+				</div>
+			</div>
+		</figure>
+		<h3>Success</h3>
+		<figure>
+			<div class="notification-box ">
+				<div class="notification-icons">
+					<i class="material-icons md-light">
+						error
+					</i>
+			
+				</div>
+				<div>
+					<h4>Notification Title</h4>
+					<p>Notification message goes here.</p>	
+				</div>
+				<div class="notification-icons">
+					<i class="material-icons md-light">
+							clear
+					</i>
+				</div>
+			</div>
+		</figure>
+		<h2>Hero Block</h2>
+		<figure>
+			<a href="hero-block.html"><img src="images/hero-block.png"></a>
 		</figure>
 	</main>
 

@@ -10,6 +10,18 @@ body {
 	margin: 0;
 	
 }
+.full-width {
+	margin-left: calc(-100vw / 2 + 35rem / 2);
+	margin-right: calc(-100vw / 2 + 35rem / 2);
+	
+}
+
+figure img {
+	max-width: 30rem;
+	margin: auto;
+	width: 100%;
+}
+
 
 @media (min-width: 700px) {
 	main {
@@ -183,6 +195,7 @@ Page Nav Component
 	border-bottom: dashed 1px #E6E2DD;
 	padding: .5rem;
 }
+
 @media (min-width: 770px){
 	.primary-nav li {
 		display: inline-block;
@@ -281,7 +294,7 @@ buttons
 
 .tertiary-button {
 	background-color: var(--color-secondary-two);
-	border: 1px solid var(--color-secondary-one)
+	border: 1px solid var(--color-secondary-one);
 	box-shadow: 18px 18px 22px -4px rgba(0,0,0,0.33);
 	color: var(--color-secondary-one);
 
@@ -297,6 +310,13 @@ buttons
 	background-color: var(--color-secondary-two);
 	color: var(--color-secondary-one);
 }
+
+.arrow-top {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+}
+	
 /* ===========================================================
 Modals
 ============================================================ */
@@ -304,7 +324,7 @@ dialog {
 	border-bottom: none;
 	border-left: none;
 	border-right: none;
-	border-top: 2rem solid var(--color-warning);
+	border-top: 2rem solid var(--color-action);
 	box-shadow: 5px 5px 15px rgba(0,0,0,.5);
 	padding: 0 2rem;
 }
@@ -382,7 +402,7 @@ input:focus, select:focus, textarea:focus {
 	border: 2px solid var(--color-action);
 }
 
-input[disabled], textarea[disabled] {
+input[disabled], textarea[disabled], select[disabled] {
 	background-color: var(--color-secondary-two);
 	opacity: .5;
 }
@@ -441,7 +461,86 @@ textarea {
 	background-color: var(--color-secondary-two);
 	color: var(--color-secondary-one);
 }
+/* ===========================================================
+Notifications
+============================================================ */
+.material-icons.md-light { 
+	color: rgba(255, 255, 255, 1); 
+}
+.material-icons.md-light.md-inactive { 
+	color: rgba(255, 255, 255, 0.3); 
+}
+.notification-box {
+	align-items: flex-start;
+	background-color: var(--color-secondary-one);
+	color: var(--color-secondary-two);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+}
+	
+.notification-icons {
+	padding: .5rem;
+}
+div h4 {
+	margin: .5rem;
+}
+.error {
+	border-top: 2rem solid var(--color-negative);
+}
 
+.warning {
+	border-top: 2rem solid var(--color-warning);
+}
+
+.neutral {
+	border-top: 2rem solid var(--color-action);
+}
+
+.success {
+	border-top: 2rem solid var(--color-positive);
+}
+/* ===========================================================
+Hero Section
+============================================================ */
+.hero {
+	background-image: url(images/hero-image.jpg);
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.hero h1, .hero p {
+	color: var(--color-secondary-two-light);
+	margin: 0 2rem;
+	text-align: center;
+	text-shadow: 1px 1px 14px black; 
+}
+.hero p {
+	margin: .5rem 0;
+}
+
+.hero div {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-start;
+	margin: .4rem 2.7rem;
+}
+
+@media (min-width: 600px) {
+	.hero div {
+		margin: .2rem;
+		justify-content: center;
+	}
+}
+@media (min-width: 775px) {
+	.hero h1 {
+		font-size: var(--size-six-up);
+	}
+} 
 /* ===========================================================
 Examples
 ============================================================ */
@@ -454,7 +553,7 @@ Examples
 	list-style-type: none;
 }
 
-.feature-example {
+.feature-text {
 	font-family: var(--font-primary);
 	font-size: var(--size-two-up);
 	line-height: 1.45;
@@ -505,12 +604,6 @@ Examples
 	font-size: 2rem;
 }
 
-.full-width {
-	margin-left: calc(-100vw / 2 + 35rem / 2);
-	margin-right: calc(-100vw / 2 + 35rem / 2);
-	
-
-}
 
 
 
