@@ -59,7 +59,6 @@ figure img {
 	.grid-parent-cta {
 		grid-template-columns: repeat(3, 1fr);
 		grid-column-gap: 2rem;
-		overflow: hidden;
 	}
 }
 
@@ -553,7 +552,8 @@ Cards
 
 .card-cta .card-content{
     color: var(--color-primary-text);
-    max-width: 20rem;
+    margin: auto;
+    max-width: 100%;
     text-align: center;
 }
 	
